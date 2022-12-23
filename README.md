@@ -1,8 +1,8 @@
 # VoiceLite
 ## Description
 This is a prototype for a HomePod-like voice assistant aimed for low power, lightweight ML inference. This device is built up with two main development kit - **B-L475E-IOT01A** from STM and **Jetson Nano** from Nvidia, acting as audio input and inference device respectively.
-**B-L475E-IOT01A: **
-**Jetson Nano: **
+**B-L475E-IOT01A:**
+**Jetson Nano:**
 
 ## How to run 
 1. Build a new program in Mbed Studio.
