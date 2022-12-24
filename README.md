@@ -1,8 +1,16 @@
 # VoiceLite
 ## Description
-This is a prototype for a HomePod-like voice assistant aimed for low power, lightweight ML inference. This device is built up with two main development kit - **B-L475E-IOT01A** from STM and **Jetson Nano** from Nvidia, acting as audio input and inference device respectively.
+We are aware of the demand for privacy-aware voice assistants that may be achieved by offline inference, i.e., a Homepod-like artificial assistant. We may picture a household scenario where we strive to provide ease of access for responsive service (inquiry, call for aid etc.). These are often powered by designed systems, and our challenge is to at least implement the functions on a general-purpose embedded system, which gives us an advantage of being a low power device with offline input inference in light of aforementioned privacy concerns, as well as portability for ease of installation.
+\
+This may be powered by a lightweight embedded system architecture, which is what we proposed, **VoiceLite**, a lightweight voice recognition system powered by **Jetson Nano** from Nvidia and a STM32 development kit **B-L475E-IOT01A**.
+\
 \
 **B-L475E-IOT01A:**
+\
+- Using on-board audio sensor (MP34DT01) to retrieve data
+- Adapt Button Service to initiate recording of audio
+- Transmitting data through socket connection with Jetson Nano for further processing
+
 \
 **Jetson Nano:**
 \
