@@ -5,12 +5,14 @@ We are aware of the demand for privacy-aware voice assistants that may be achiev
 This may be powered by a lightweight embedded system architecture, which is what we proposed, **VoiceLite**, a lightweight voice recognition system powered by **Jetson Nano** from Nvidia and a STM32 development kit **B-L475E-IOT01A**.
 \
 \
+![](https://i.imgur.com/f3xBnkk.png)
+\
+\
 **B-L475E-IOT01A:**
 \
 - Using on-board audio sensor (MP34DT01) to retrieve data
 - Adapt Button Service to initiate recording of audio
 - Transmitting data through socket connection with Jetson Nano for further processing
-
 \
 **Jetson Nano:**
 \
