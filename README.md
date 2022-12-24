@@ -20,6 +20,8 @@ This may be powered by a lightweight embedded system architecture, which is what
     - Keyword spotting (KS), Automatic Speech Recognition (ASR)
 - Successful detection of keyword triggers an email notification
 
+\
+For further insights, consider inspecting `report.pdf`.
 
 ## How to run 
 Git clone this repo into your environment, build and compile.
