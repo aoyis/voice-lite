@@ -9,16 +9,32 @@ This may be powered by a lightweight embedded system architecture, which is what
 \
 \
 **B-L475E-IOT01A:**
-\
 - Using on-board audio sensor (MP34DT01) to retrieve data
 - Adapt Button Service to initiate recording of audio
 - Transmitting data through socket connection with Jetson Nano for further processing
-\
+
 **Jetson Nano:**
-\
+- Converting raw string to .wav files
+- Post-processing of audio input
+    - Keyword spotting (KS), Automatic Speech Recognition (ASR)
+- Successful detection of keyword triggers an email notification
+
+
 ## How to run 
-1. Build a new program in Mbed Studio.
-2. Import `mbed-dsp` (url: https://os.mbed.com/teams/mbed-official/code/mbed-dsp/) for FIR filter function and `BSP_B-L475E-IOT01` (url: https://os.mbed.com/teams/ST/code/BSP_B-L475E-IOT01/) driver library for the 3D accelerator sensors.
-3. Replace the file under `~\mbed-dsp\cmsis_dsp\TransformFunctions\arm_bitreversal2.S` directory and `~\main.cpp`.
-4. Build and compile the program.
-5. Modify the parameters in the `visualize.py` for the visualization of the output.
+Git clone this repo into your environment, build and compile.
+### B-L475E-IOT01A
+- Modified the parameters in `~\mbed_app.json`.
+    - Change `config["hostname"]["value"]` to your host IP (you can get it using `ipconfig` in local **Jetson Nano** cmd) in `~\mbed_app.json`.
+    - Change `target_overrides["*"]["nsapi.default-wifi-ssid"]` and `target_overrides["*"]["nsapi.default-wifi-password"]` to your local wifi network same as your local **Jetson Nano**.
+- After initialization, press the blue `USER` button to record for about 2 seconds.
+
+### Jetson Nano
+- Use the command `docker/run.sh` to initialize the environment.
+- Inside docker:
+    - Keyword spotting (KS) with email notification:
+        - `python3 data/hello.py --model matchboxnet --wav [processed_wav]`
+    - Automatic Speech Recognition (ASR):
+        - `python3 data/hello.py --wav [processed_wav]`
+
+## Demo
+Youtube: https://www.youtube.com/watch?v=jkTV97ffpUw
