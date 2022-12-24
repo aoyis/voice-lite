@@ -32,7 +32,10 @@ Git clone this repo into your environment, build and compile.
 - After initialization, press the blue `USER` button to record for about 2 seconds.
 
 ### Jetson Nano
-- Use the command `docker/run.sh` to initialize the environment.
+- Use `python3 socket-server.py` to establish socket connection.
+    - Change `HOST` and `PORT` to your host IP (you can get it using `ifconfig` in local **Jetson Nano** cmd), make sure the port are same as in **B-L475E-IOT01A**
+- Run `text-to-wav.py` for conversion.
+- Use `docker/run.sh` to initialize the environment.
 - Inside docker:
     - Keyword spotting (KS) with email notification:
         - `python3 data/hello.py --model matchboxnet --wav [processed_wav]`
