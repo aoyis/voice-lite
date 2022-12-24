@@ -1,0 +1,52 @@
+[
+   {
+      "module": "test_asr.py",
+      "config": "asr.json",
+      "model": "quartznet"
+   },
+   {
+      "module": "test_asr.py",
+      "config": "asr.json",
+      "model": "quartznet_greedy"
+   },
+   {
+      "module": "test_asr.py",
+      "config": "asr_keyword.json",
+      "model": "matchboxnet"
+   },
+   {
+      "module": "test_asr.py",
+      "config": "asr_vad.json",
+      "model": "vad_marblenet"
+   },
+   {
+      "module": "test_nlp.py",
+      "config": "nlp_qa.json",
+      "model": "distilbert_qa_128"
+   },
+   {
+      "module": "test_nlp.py",
+      "config": "nlp_qa.json",
+      "model": "distilbert_qa_384"
+   },
+   {
+      "module": "test_nlp.py",
+      "config": "nlp_intent.json",
+      "model": "distilbert_intent"
+   },
+   {
+      "module": "test_nlp.py",
+      "config": "nlp_sentiment.json",
+      "model": "distilbert_sentiment"
+   },
+   {
+      "module": "test_nlp.py",
+      "config": "nlp_token.json",
+      "model": "distilbert_ner"
+   },
+   {
+      "module": "test_tts.py",
+      "config": "tts.json",
+      "model": "fastpitch_hifigan"
+   }
+]
